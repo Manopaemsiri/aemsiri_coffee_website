@@ -2,5 +2,4 @@
 
 Using Next.js React Framework & Tailwind CSS
 
-![bandicam 2023-08-02 17-55-13-726](https://github.com/Manopaemsiri/aemsiri_coffee/assets/76554047/61029191-6109-4563-8dce-902a31483ecf)
 ![screencapture-localhost-3000-2023-08-02-17_02_16](https://github.com/Manopaemsiri/aemsiri_coffee/assets/76554047/444bd72e-6c2f-41d1-88e0-7c3382614749)
