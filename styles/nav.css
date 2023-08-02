@@ -1,0 +1,114 @@
+/* Topnav */
+nav.topnav{
+  position:fixed; top:0; left:0; width:100%; z-index:97; 
+  padding:0 8rem;
+}
+nav.topnav .topnav-wrapper{position:relative; display:flex; justify-content:space-between; height:5.5rem;}
+nav.topnav .topnav-wrapper > .logo{position:relative;  width:8rem; height:8rem;}
+nav.topnav .topnav-wrapper > .logo .logo-wrapper{position:absolute; bottom:-2rem;}
+nav.topnav .topnav-wrapper > .logo img{
+  display:block; max-width:100%; width:auto; max-height:100%; height:auto;
+}
+nav.topnav .topnav-wrapper > .menu-container{display:flex; padding:0 .25rem;}
+nav.topnav .topnav-wrapper > .menu-container .menu{
+  display:flex; align-items:center; padding:0 2rem; transition:color .25s;
+}
+nav.topnav .options{padding:0 2rem; transform:skewX(-0.04turn);}
+nav.topnav .options > .social-list{
+  display:flex; height:100%; align-items:center; 
+  transform:skewX(0.04turn)
+}
+nav.topnav .options > .social-list .social-item{margin:.5rem .75rem;}
+nav.topnav .sidenav-toggle{display:flex; align-items:center;}
+nav.topnav .show-tablet{display:none;}
+nav.topnav + .topnav-spacer{display:block; height:5.5rem; width:100%;}
+@media screen and (max-width:1299.98px){
+  nav.topnav{padding:0 5rem;}
+}
+@media screen and (max-width:1199.98px){
+  nav.topnav{padding:0 3rem;}
+}
+@media screen and (max-width:991.98px){
+  nav.topnav{padding:0 4rem;}
+  nav.topnav .hide-tablet{display:none!important;}
+  nav.topnav .show-tablet{display:flex;}
+  nav.topnav .topnav-wrapper > .logo{width:7rem; height:7rem;}
+}
+@media screen and (max-width:767.98px){
+  nav.topnav{padding:0 2rem;}
+  nav.topnav .topnav-wrapper{height:5rem;}
+  nav.topnav .topnav-wrapper > .logo{width:6.5rem; height:6.5rem;}
+  nav.topnav .topnav-wrapper > .logo .logo-wrapper{position:absolute; bottom:-1rem;}
+  nav.topnav + .topnav-spacer{height:5rem;}
+}
+@media screen and (max-width:575.98px){
+  nav.topnav .topnav-wrapper > .logo{width:6rem; height:6rem;}
+}
+@media screen and (max-width:390.98px){
+  nav.topnav .topnav-wrapper > .logo{width:5.75rem; height:5.75rem;}
+}
+
+
+/* Sidenav */
+nav.sidenav{
+  position:fixed; top:0; left:0; z-index:99; width:27rem; overflow:hidden;
+  height:100vh; transform:translateX(-27rem); transition:transform .25s; -webkit-transition:transform .25s;
+}
+nav.sidenav.active{transform:translateX(0);}
+nav.sidenav .wrapper{position:relative;}
+nav.sidenav .sidenav-toggle{
+  position:absolute; top:0; right:0; display:flex; 
+  justify-content:flex-end; padding:.75rem .25rem;
+}
+nav.sidenav .sidenav-toggle .hamburger{scale:.6;}
+nav.sidenav:not(.active) .wrapper > .pattern{right:0;}
+nav.sidenav .logo-container{
+  position:relative; display:flex; align-items:center; padding:1.5rem 2rem 1.5rem 2rem;
+  border-bottom:1px solid transparent;
+}
+nav.sidenav .menu-container > .menu{
+  position:relative; transition:color .25s; font-size:1.9375rem;
+  cursor:pointer;
+}
+nav.sidenav .menu-container > .menu .text-shadow{
+  position:absolute; top:-.75rem; left:.5625rem; opacity:.1;
+}
+nav.sidenav .logo-container > .logo{width:7rem; height:7rem;}
+nav.sidenav .logo-container > .logo img{
+  display:block; max-width:100%; width:auto; max-height:100%; height:auto;
+}
+nav.sidenav .text-container{width:calc(100% - 7rem); padding-left:1rem;}
+nav.sidenav + .sidenav-filter{
+  position:fixed; top:0; bottom:0; width:100vw; height:100vh; z-index:98;
+  cursor:pointer; pointer-events:none; opacity:0; transition:opacity .45s;
+}
+nav.sidenav .menu-container{padding:2rem 2rem;}
+nav.sidenav .menu-container .menu{margin:1rem 0;}
+nav.sidenav.active + .sidenav-filter{pointer-events:all; opacity:1;}
+
+nav.sidenav .wrapper > .pattern{
+  position:absolute; bottom:-.5rem; right:-2rem;
+}
+nav.sidenav .wrapper > .pattern img{
+  display:block; max-width:100%; width:auto; max-height:100%; height:15rem;
+  filter:brightness(200%) contrast(0%) saturate(100%) blur(0px) hue-rotate(0deg);
+  opacity:.3;
+}
+@media screen and (max-width:991.98px){
+  nav.sidenav .text-container{width:calc(100% - 5.875rem);}
+}
+@media screen and (max-width:490.98px){
+  nav.sidenav{width:100vw; transform:translateX(-100vw);}
+}
+@media screen and (max-width:320.98px){
+  nav.sidenav .logo-container{flex-direction:column;}
+  nav.sidenav .text-container{width:100%; text-align:center; margin-top:.75rem;}
+  nav.sidenav .menu-container > .menu{text-align:center;}
+  nav.sidenav .menu-container > .menu .text-shadow{left:calc(50% - 2rem);}
+}
+
+/* Footer */
+nav.footer{
+  display:flex; justify-content:center; border-top:1px solid transparent;
+  padding:2rem 0;
+}

@@ -1,0 +1,299 @@
+/* Reset */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200;300;400;500;600;700&family=Satisfy&display=swap');
+
+
+:root {
+  --font-bebas: 'Bebas Neue', sans-serif;
+  --font-oswald: 'Oswald', sans-serif;
+  --font-herricane: 'Satisfy', cursive;;
+}
+
+
+/* Font Family */
+.font-bebas{font-family:var(--font-bebas);}
+.font-oswald{font-family:var(--font-oswald);}
+.font-herricane{font-family:var(--font-herricane);}
+
+
+html, body{
+  position: relative; padding:0; margin:0; overflow-x:hidden; overflow-y:auto;
+  font-size:16px; font-weight:300; line-height:1.6; font-family: 'Bebas Neue', sans-serif;
+}
+
+*{box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; outline:none;}
+
+
+/* Section & Container */
+.section-padding{padding:4rem 0;}
+@media screen and (max-width:1199.98px){
+  .section-padding{padding:3.5rem 0;}
+}
+@media screen and (max-width:991.98px){
+  .section-padding{padding:3rem 0;}
+}
+@media screen and (max-width:767.98px){
+  .section-padding{padding:3rem 0;}
+}
+@media screen and (max-width:575.98px){
+  .section-padding{padding:2.5rem 0;}
+}
+@media screen and (max-width:414.98px){
+  .section-padding{padding:2rem 0;}
+}
+
+
+/* Typography */
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, .p, li, label{
+  margin:0; line-height:1.62;
+}
+h1, .h1{font-size:4rem; line-height:1.1;}
+h2, .h2{font-size:3.5rem; line-height:1.1;}
+h3, .h3{font-size:2.75rem; line-height:1.2;}
+h4, .h4{font-size:2rem; line-height:1.4;}
+h5, .h5{font-size:1.75rem; line-height:1.5;}
+h6, .h6{font-size:1.25rem;}
+p.lg, .p.lg, li.lg, label.lg{font-size:1.0625rem;}
+p, .p, li, label{font-size:1rem;}
+p.sm, .p.sm, li.sm, label.sm{font-size:.9375rem;}
+p.xs, .p.xs, li.xs, label.xs{font-size:.875rem;}
+p.xxs, .p.xxs, li.xxs, label.xxs{font-size:.8125rem;}
+@media screen and (max-width:1199.98px){
+h1, .h1{font-size:3.625rem; line-height:1.15;}
+h3, .h3{font-size:2.5rem; line-height:1.25;}
+h4, .h4{font-size:1.875rem; line-height:1.4;}
+h5, .h5{font-size:1.625rem; line-height:1.55;}
+}
+@media screen and (max-width:991.98px){
+h1, .h1{font-size:3.25rem; line-height:1.2;}
+h3, .h3{font-size:2.25rem; line-height:1.3;}
+h4, .h4{font-size:1.75rem; line-height:1.45;}
+h5, .h5{font-size:1.5rem; line-height:1.62;}
+}
+@media screen and (max-width:767.98px){
+h1, .h1{font-size:2.875rem; line-height:1.25;}
+h3, .h3{font-size:2rem; line-height:1.35;}
+h4, .h4{font-size:1.625rem; line-height:1.5;}
+h5, .h5{font-size:1.375rem; line-height:1.62;}
+}
+@media screen and (max-width:575.98px){
+h1, .h1{font-size:2.5rem; line-height:1.3;}
+h3, .h3{font-size:1.75rem; line-height:1.4;}
+p.lg, .p.lg, li.lg, label.lg{font-size:1rem;}
+}
+
+
+/* Animation */
+.fade-up{transition:all 1.5s;}
+.fade-down{transition:all 1.5s;}
+.card-down, .card-down-01,
+.card-down-02, .card-down-03{transition:transform 3s;}
+
+
+/* Hamburger */
+.hamburger{cursor:pointer;}
+.hamburger > *{width:2rem; height:.14rem; transition:all .5s;}
+.hamburger > *:nth-child(2){margin:.375rem 0;}
+.hamburger.active > *:nth-child(1){
+	-webkit-transform:rotate(-45deg)translate(-.375rem, .375rem);
+	transform:rotate(-45deg)translate(-.375rem, .375rem);
+}
+.hamburger.active > *:nth-child(2){opacity:0;}
+.hamburger.active > *:nth-child(3){
+	-webkit-transform:rotate(45deg)translate(-.375rem,-.375rem);
+	transform:rotate(45deg)translate(-.375rem, -.375rem);
+}
+
+
+.jc-start{justify-content:flex-start!important;}
+.height-full, .h-full{height:100%!important; max-height:100%!important;}
+
+
+/* Special Card */
+.ss-card{display:block; width:100%;}
+.ss-card .text-container .title, .ss-card .text-container .desc{
+  display:block; display:-webkit-box; text-overflow:ellipsis; overflow:hidden;
+  -webkit-box-orient:vertical; transition:color .25s;
+}
+
+
+@media screen and (max-width:1199.98px){
+  .lg-no-br > br{display:none;}
+}
+
+
+#loftloader-wrapper{
+  position:fixed; top:0; left:0; z-index:100; width:100%; height:100%;
+  background:0 0!important;
+}
+#loftloader-wrapper .loader-inner{
+  position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);
+  z-index:1001; text-align:center; transition:all 0s;
+}
+#loftloader-wrapper .imgloading-container{
+  position:absolute; bottom:0; left:0; z-index:3; display:block; 
+  width:100%; height:0; transition:0s; overflow:hidden;
+  -webkit-animation:imgLoading 6s linear infinite;
+  animation:imgLoading 6s linear infinite; will-change:height, opacity; transform-origin:0 100%;
+}
+@keyframes imgLoading{
+  0% {
+    height:0%;
+    opacity:1;
+  }
+  95% {
+    height:100%;
+    opacity:1;
+  }
+  100% {
+    height:100%;
+    opacity:0;
+  }
+}
+
+
+
+/* Special Image */
+.ss-img{display:block; position:relative; width:100%; padding:64% 0 0 0; overflow:hidden;}
+.ss-img.square{padding:100% 0 0 0;}
+.ss-img.horizontal{padding:50% 0 0 0;}
+.ss-img.horizontal-02{padding:45% 0 0 0;}
+.ss-img.vertical{padding:120% 0 0 0;}
+.ss-img.vertical-02{padding:140% 0 0 0;}
+.ss-img > .img-bg{
+    position:absolute; top:0; bottom:0; left:0; right:0; background-size:cover;
+    background-position:center; transition:transform .25s, filter .25s;
+}
+.ss-card:hover .ss-img:not(.no-hover) > .img-bg,
+.ss-img:not(.no-hover):hover > .img-bg{transform:scale(1.1);}
+
+
+/* Special Card 01 */
+.ss-card-01{  
+  position:absolute; top:-7rem; left:8rem; right:auto; bottom:0;
+}
+@media screen and (max-width:999.98px){
+  .ss-card-01{top:-3.5rem; left:4rem;}
+}
+@media screen and (max-width:768.98px){
+  .ss-card-01{top:-3rem; left:2rem;}
+}
+@media screen and (max-width:767.98px){
+  .ss-card-01{top:-5rem; left:auto; right:-17rem;}
+}
+@media screen and (max-width:639.98px){
+  .ss-card-01{top:-20rem; right:-60vw;}
+}
+@media screen and (max-width:375.98px){
+  .ss-card-01{top:-4rem; right:-13rem;}
+}
+
+
+/* Special Card 02 */
+@media screen and (max-width:639.98px){
+  .ss-card-02{margin-top:1rem;}
+}
+
+
+/* Special Card 03 */
+.ss-card-03{
+  position:absolute; top:-5rem; left:auto; bottom:0; right:4.5rem;
+  width:58%; max-width:58%;
+}
+@media screen and (max-width:1023.98px){
+  .ss-card-03{
+    position:relative; top:0; right:0; margin:0 auto;
+  }
+}
+@media screen and (max-width:767.98px){
+  .ss-card-03{display:none;}
+}
+@media screen and (max-width:390.98px){
+  .ss-card-03{width:65%; max-width:65%;}
+}
+
+
+/* Special Card 04 */
+.ss-card-04{
+  position:absolute; top:0rem; left:3.5rem; bottom:auto; right:auto;
+  width:28%; max-width:28%;
+}
+@media screen and (max-width:1023.98px){
+  .ss-card-04{top:2rem;}
+}
+@media screen and (max-width:767.98px){
+  .ss-card-04{display:none;}
+}
+@media screen and (max-width:414.98px){
+  .ss-card-04{width:30%; max-width:30%; left:2.375rem;}
+}
+
+
+/* Special Card 05 */
+.ss-card-05{
+  position:absolute; top:-1rem; left:auto; right:60%; width:68%;
+  max-width:68%;
+}
+@media screen and (max-width:1370.98px){
+  .ss-card-05{top:2.5rem;}
+}
+@media screen and (max-width:767.98px){
+  .ss-card-05{display:none;}
+}
+
+
+/* Special Card 06 */
+.ss-card-06{
+  position:absolute; top:2rem; left:auto; right:5rem; width:42%;
+  max-width:42%;
+}
+@media screen and (max-width:1370.98px){
+  .ss-card-06{top:4.5rem;}
+}
+@media screen and (max-width:767.98px){
+  .ss-card-06{display:none;}
+}
+
+
+/* Special Card 07 */
+.ss-card-07{
+  position:absolute; top:0; right:auto; left:-37%;
+  width:130%; max-width:130%;
+}
+@media screen and (max-width:1023.98px){
+  .ss-card-07{position:relative; scale:.8;}
+}
+
+
+/* Special Card 08 */
+
+
+/* Special Text */
+.ss-text{
+  display:inline-block; border:solid transparent; padding:0 1.25rem;
+  border-width:3px 0 3px 0; 
+}
+
+
+/* Special Title - Line Left */
+.ss-title-line-left{position:relative;}
+.ss-title-line-left::before{
+  position:absolute; content:""; top:1.25rem; left:-11.5rem; width:10rem; height:.25rem;
+}
+
+
+/* Special Title - Line Right */
+.ss-title-line-right{position:relative;}
+.ss-title-line-right{
+  display:flex; align-items:center; justify-content:flex-end;
+}
+.ss-title-line-right > .line{
+  width:10rem; height:.25rem; margin-left:1rem;
+}
+@media screen and (max-width:767.98px){
+  .ss-title-line-right{justify-content:flex-start;}
+}
