@@ -1,4 +1,4 @@
-## Responsive Coffee Website
+## Responsive Coffee Shop Website
 
 Next.js React Framework, Tailwind CSS & GSAP - GreenSock
 
